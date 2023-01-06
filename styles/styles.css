@@ -1,0 +1,127 @@
+:root{
+  /* colors */
+  --primary-red: hsl(0, 78%, 62%);
+  --primary-cyan: hsl(180, 62%, 55%);
+  --primary-orange: hsl(34, 97%, 64%);
+  --primary-blue: hsl(212, 86%, 64%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-dark-blue: hsl(234, 12%, 34%);
+  --neutral-grayish-blue: hsl(229, 6%, 66%);
+  --neutral-light-gray: hsl(0, 0%, 98%);
+
+  /* font weights */
+  --fw-extralight: 200;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+}
+
+body{
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: var(--neutral-light-gray);
+}
+
+main{
+  margin: 5rem auto;
+  font-family: 'Poppins', sans-serif;
+  padding-inline: 1.9rem;
+}
+
+h1, h2, h3{
+  color: var(--neutral-dark-blue);
+}
+
+main p{
+  color: var(--neutral-grayish-blue);
+  font-size: 0.9375rem;
+}
+
+.hero{
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-weight: var(--fw-extralight);
+}
+
+.hero__para{
+  margin-block: 1rem 4rem;
+  max-width: 545px;
+}
+
+.card-container{
+  display: grid;
+  gap: 1.5rem;
+  place-content: center;
+}
+
+.card{
+  background-color: var(--neutral-white);
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 1.2rem 1.5rem 1.65rem 1.5rem;
+  max-width: 314px;
+  box-shadow: 0px 5px 10px var(--neutral-grayish-blue);
+}
+
+.card__supervisor{
+  border-top: var(--primary-cyan) 3.5px solid;
+}
+
+.card__team-builder{
+  border-top: var(--primary-red) 3.5px solid;
+}
+
+.card__karma{
+  border-top: var(--primary-orange) 3.5px solid;
+}
+
+.card__calculator{
+  border-top: var(--primary-blue) 3.5px solid;
+}
+
+.card__para{
+  margin-block: .2rem 2rem;
+}
+
+.card img{
+  margin-left: auto;
+}
+
+
+@media (min-width: 700px){
+  h1, h2{
+    font-size: 2.25rem;
+  }
+
+  .card-container{
+    grid-template-areas:  "empty team-builder empty"
+                          "supervisor teambuilder calculator"
+                          "supervisor karma calculator"
+                          "empty karma empty";
+    grid-template-columns: auto auto auto;
+  }
+
+  /* .card__team-builder{
+    grid-area: "team-builder";
+  }
+
+  .card__supervisor{
+    grid-area: "supervisor";
+  }
+
+  .card__calculator{
+    grid-area: "calculator";
+  }
+
+  .card__karma{
+    grid-area: "karma";
+  } */
+}
+
+
+/* attribution from template */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
