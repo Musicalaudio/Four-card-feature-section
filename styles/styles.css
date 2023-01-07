@@ -22,9 +22,13 @@ body{
 }
 
 main{
-  margin: 5rem auto;
+  margin: 4.5rem auto;
   font-family: 'Poppins', sans-serif;
   padding-inline: 1.9rem;
+}
+
+h1, h2{
+  line-height: 1.3;
 }
 
 h1, h2, h3{
@@ -92,16 +96,20 @@ main p{
 
 
 @media (min-width: 900px){
+  main{
+    /* max-width: 75vw; */
+  }
+  
   h1, h2{
     font-size: 2.25rem;
   }
 
   .card-container{
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:  "empty team-builder empty"
+    grid-template-areas:  ". team-builder ."
                           "supervisor team-builder calculator"
                           "supervisor karma calculator"
-                          "empty karma empty";
+                          ". karma .";
   }
 
   .card__team-builder{
@@ -118,6 +126,15 @@ main p{
 
   .card__karma{
     grid-area: karma;
+  }
+
+  .card{
+    padding: 1.6rem 1.675rem 1.95rem 1.675rem;
+    max-width: 380px;
+  }
+
+  .card__para{
+    margin-inline-end: .5rem;
   }
 }
 
