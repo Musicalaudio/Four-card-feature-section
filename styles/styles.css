@@ -99,7 +99,7 @@ main p{
   .card-container{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:  "empty team-builder empty"
-                          "supervisor teambuilder calculator"
+                          "supervisor team-builder calculator"
                           "supervisor karma calculator"
                           "empty karma empty";
   }
